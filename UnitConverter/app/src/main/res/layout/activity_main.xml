@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFED"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Convert from :"
+        android:textColor="#FF6F00"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rgholder"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginRight="200dp"
+        app:cardBackgroundColor="#FF6F00"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioGroup
+            android:id="@+id/main_group"
+            android:layout_width="262dp"
+            android:layout_height="329dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head">
+
+            <RadioButton
+                android:id="@+id/u_gm"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Gram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_kg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Kilogram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_hg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Hectagram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_dg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Decagram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_dcg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Decigram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_cg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-black"
+                android:text="Centigram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/u_mg"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:checked="false"
+
+                android:fontFamily="sans-serif-black"
+                android:text="Milligram"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000"
+                android:textSize="20sp"
+                app:buttonTint="#FFFFFF" />
+
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="monospace"
+        android:hint="Number..."
+        android:inputType="numberDecimal"
+        android:shadowColor="#000000"
+        android:textColorHint="#494747"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgholder"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/convertbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginLeft="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="CONVERT"
+        android:textColor="#FF6F00"
+        app:backgroundTint="#020202"
+        app:layout_constraintBaseline_toBaselineOf="@+id/data"
+        app:layout_constraintLeft_toRightOf="@id/data"
+        app:rippleColor="#302E2E" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Frame_layout"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:foregroundGravity="center_horizontal"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+
+    <TextView
+        android:id="@+id/cautiontxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="swipe up results for more"
+        android:textColor="#070707"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backbtn" />
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="217dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="BACK"
+        android:textColor="#FF6F00"
+        android:visibility="gone"
+        app:backgroundTint="#020202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Frame_layout"
+        app:layout_constraintVertical_bias="0.14"
+        app:rippleColor="#302E2E" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/base_card"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center_horizontal"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:layout_constraintVertical_bias="0.125">
+
+
+        <RadioGroup
+            android:id="@+id/base_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checkedButton="@id/u_weights"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/u_weights"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Weights"
+                android:textColor="@color/white"
+                app:buttonTint="#FF6F00" />
+
+            <RadioButton
+                android:id="@+id/u_Lengths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Lengths"
+                android:textColor="@color/white"
+                app:buttonTint="#FF6F00" />
+
+            <RadioButton
+                android:id="@+id/u_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Area"
+                android:textColor="@color/white"
+                app:buttonTint="#FF6F00" />
+
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
